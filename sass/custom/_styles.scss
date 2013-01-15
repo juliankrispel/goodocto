@@ -1,0 +1,274 @@
+// This File is imported last, and will override other styles in the cascade
+// Add styles here to make changes without digging in too much
+
+$bodyColor: #333;
+$hoverColor: #999;
+
+a{
+  -webkit-transition: .4s;
+  -moz-transition: .4s;
+  -ms-transition: .4s;
+  -o-transition: .4s;
+  transition: .4s;
+}
+
+html, body, *{
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 22px;
+  color: $bodyColor;
+}
+
+h1{
+  font-size: 140%;
+  margin-bottom: .5em;
+}
+
+h1 a, h1 a:visited{
+  color: $bodyColor;
+  text-decoration: none;
+}
+
+h1 a:hover{
+  color: $hoverColor;
+}
+.categories a{
+  color: #333;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.categories a:hover{
+  color: #333;
+  border-color: #999;
+}
+
+.row{
+  clear: both;
+  position: relative;
+  overflow: hidden;
+}
+
+.half{
+  width: 50%;
+}
+
+.third, .one-third{
+  width: 33%;
+}
+
+.two-thirds{
+  width: 66%;
+}
+
+article{
+  position: relative;
+  padding-top: 50px;
+  padding-bottom: 30px;
+}
+
+article p, article h1{
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+article blockquote p{
+  max-width: 100%;
+  margin-top: .5em;
+  margin-bottom: .5em;
+}
+
+article:after, .clearfix{
+  content: " ";
+  position: relative;
+  display: table;
+  clear: both;
+}
+
+article footer{
+  clear: both;
+}
+
+.meta p{
+  color: #999;
+  font-size: 80%;
+}
+
+.logo img{
+  height: 100px;
+}
+
+.homepage .logo img{
+  height: auto;
+}
+
+
+.blog-index article{
+  border-bottom: 1px solid rgba(0,0,0,.1);
+
+  .meta{
+    margin: 0;
+    opacity: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .meta p{
+    color: #999;
+    font-size: 80%;
+    font-weight: 300;
+    width: auto;
+    display: inline-block;
+    position: relative;
+    top: -22px;
+    padding: 0 30px;
+    background: #E0E0E0;
+  }
+}
+
+.meta *, .meta a, .meta .categories a{
+  color: inherit;
+}
+
+body{
+  padding: 50px 100px;
+}
+
+body > div, body > div > div{
+  background: none;
+  border: none;
+}
+
+html{
+  background: #e0e0e0;
+}
+
+#main, #content, header, body > nav{
+  background: none;
+}
+
+.header{
+  padding-bottom: 40px;
+}
+
+.homepage .header{
+  padding-bottom: 80px;
+}
+
+figure img{
+  width: 100%;
+}
+
+figcaption{
+  font-size: 80%;
+  text-align: center;
+}
+
+.b-b{
+  border-bottom: 1px solid rgba(0,0,0,.1);
+}
+
+.p-b{
+  padding-bottom: 50px;
+}
+
+.p-t{
+  padding-top: 40px;
+}
+
+.m-r{
+  margin-right: 40px;
+}
+
+.m-l{
+  margin-left: 40px;
+}
+
+.left{
+  float: left;
+}
+
+.right{
+  float: right;
+}
+
+.text-right{
+  text-align: right;
+}
+
+nav.right a{
+  margin-left: 20px;
+}
+
+nav a, nav a:visited{
+  color: #999;
+  font-size: 100%;
+  font-weight: 300;
+  text-decoration: none;
+  line-height: 1.5em;
+}
+
+nav a:hover, nav a:visited:hover{
+  color: #333;
+}
+
+#content{
+  border-right: none;
+}
+
+// Syntax Highlighting
+.code-title {
+  text-align: center;
+  font-size: 12px;
+  line-height: 2em;
+  text-shadow: 0 2px 1px #fff;
+  color: #999;
+  font-weight: normal;
+  margin-bottom: 0;
+  border-radius: none;
+  background: #eee;
+  border: none;
+}
+
+//.highlight, html .gist .gist-file .gist-syntax .gist-highlight {
+//  border: none !important; 
+//}
+
+pre, .highlight, .gist-highlight {
+  &::-webkit-scrollbar {  height: .5em; background: #eee; }
+  &::-webkit-scrollbar-thumb:horizontal { background: #ccc;  -webkit-border-radius: 4px; border-radius: 4px }
+}
+
+p{
+  margin-bottom: .8em;
+  line-height: 1.5em;
+}
+
+figure.code{
+  margin-top: 1em;
+}
+
+footer *{
+  font-size: 70%;
+  color: #999;
+}
+
+blockquote{
+  padding-left: 5%;
+  border-left: solid 10px #eee;
+
+  p{
+    font-size: 140%;
+    margin-bottom: .3em;
+  }
+
+  footer *{
+    font-size: 80%;
+    color: #999;
+  }
+}
+
+

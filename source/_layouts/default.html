@@ -1,0 +1,12 @@
+{% capture root_url %}{{ site.root | strip_slash }}{% endcapture %}
+{% include head.html %}
+<body {% if page.body_id %} id="{{ page.body_id }}" {% endif %} class="{% if page.sidebar == false or site.sidebar_disabled == true %}no-sidebar {% endif %} {% if page.sidebar == 'collapse' or site.sidebar == 'collapse' %} collapse-sidebar sidebar-footer {% endif %}{% if page.url == '/index.html' %}homepage{% endif %}"> 
+  <div class="row b-b header">
+    <header class="left" role="banner">{% include header.html %}</header>
+    <nav class="right text-right" role="navigation">{% include navigation.html %}</nav>
+  </div>
+  {{ content | expand_urls: root_url }}
+  <footer role="contentinfo">{% include footer.html %}</footer>
+  {% include after_footer.html %}
+</body>
+</html>
