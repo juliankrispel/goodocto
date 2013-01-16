@@ -4,7 +4,7 @@ title: "Test new Post"
 date: 2012-12-30 04:34
 comments: true
 style: notes_test.css
-categories: Notes Test Things
+categories: notes Test Things
 ---
 
 I think the reason I like the former incarnation is because it would read like a sentence to almost anyone, even those unfamiliar with Ruby (like my mom and we all know it is important for moms to be able to read code).

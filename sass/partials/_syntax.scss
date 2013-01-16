@@ -23,7 +23,6 @@
 }
 
 figure.code, .gist-file, pre {
-  @include box-shadow(rgba(#000, .06) 0 0 10px);
   .highlight pre { @include box-shadow(none); }
 }
 
@@ -82,7 +81,6 @@ html .gist .gist-file {
 }
 pre {
   background: $pre-bg $noise-bg;
-  @include border-radius(.4em);
   @extend .mono;
   border: 1px solid $pre-border;
   line-height: 1.45em;
@@ -107,7 +105,6 @@ p, li {
     line-height: 1.5em;
     color: #555;
     border: 1px solid #ddd;
-    @include border-radius(.4em);
     padding: 0 .3em;
     margin: -1px 0;
   }
@@ -194,7 +191,7 @@ p, li {
 }
 
 .highlight, .gist-highlight {
-  pre { background: none; @include border-radius(0px); border: none; padding: 0; margin-bottom: 0; }
+  pre { background: none;  border: none; padding: 0; margin-bottom: 0; }
   margin-bottom: 1.8em;
   background: $base03;
   overflow-y: hidden;
@@ -240,7 +237,6 @@ figure.code {
   color: #474747;
   font-weight: normal;
   margin-bottom: 0;
-  @include border-top-radius(5px);
   font-family: "Helvetica Neue", Arial, "Lucida Grande", "Lucida Sans Unicode", Lucida, sans-serif;
   background: #aaaaaa image-url("code_bg.png") top repeat-x;
   border: 1px solid #565656;

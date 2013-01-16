@@ -1,8 +1,12 @@
 // This File is imported last, and will override other styles in the cascade
 // Add styles here to make changes without digging in too much
 
+@import "compass/css3/box-sizing";
+
 $bodyColor: #333;
 $hoverColor: #999;
+$bgColor: #fff;
+$pad: 2em;
 
 a{
   -webkit-transition: .4s;
@@ -16,6 +20,7 @@ html, body, *{
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 22px;
   color: $bodyColor;
+  @include box-sizing(border-box);
 }
 
 h1{
@@ -31,6 +36,33 @@ h1 a, h1 a:visited{
 h1 a:hover{
   color: $hoverColor;
 }
+
+h2{
+  margin-bottom: 1em;
+  font-size: 120%;
+}
+
+h3{
+  font-size: 110%;
+  margin-bottom: 1em;
+}
+
+ul li{
+  margin-bottom: .7em;
+}
+
+.b-l{
+  border-left: 1px solid #ccc;
+}
+
+.b-b{
+  border-bottom: 1px solid #ccc;
+}
+
+p:last-child{
+  margin-bottom: 0;
+}
+
 .categories a{
   color: #333;
   text-decoration: none;
@@ -57,16 +89,20 @@ h1 a:hover{
 }
 
 .two-thirds{
-  width: 66%;
+  width: 67%;
 }
 
 article{
   position: relative;
-  padding-top: 50px;
-  padding-bottom: 30px;
+  padding-top: $pad;
+  padding-bottom: $pad;
 }
 
-article p, article h1{
+.fullwidth{
+  width: 100%;
+}
+
+article.hentry p, figure.code, article.hentry .meta{
   max-width: 700px;
   margin-left: auto;
   margin-right: auto;
@@ -83,15 +119,23 @@ article:after, .clearfix{
   position: relative;
   display: table;
   clear: both;
+  overflow: hidden;
 }
 
 article footer{
   clear: both;
 }
 
-.meta p{
+article.hentry h1{
+  text-align: center;
+  font-size: 240%;
+  margin: 1.6em auto 2em auto;
+}
+
+.meta{
   color: #999;
-  font-size: 80%;
+  font-size: 70%;
+  display: block;
 }
 
 .logo img{
@@ -105,27 +149,8 @@ article footer{
 
 .blog-index article{
   border-bottom: 1px solid rgba(0,0,0,.1);
-
-  .meta{
-    margin: 0;
-    opacity: 1;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    text-align: center;
-  }
-
-  .meta p{
-    color: #999;
-    font-size: 80%;
-    font-weight: 300;
-    width: auto;
-    display: inline-block;
-    position: relative;
-    top: -22px;
-    padding: 0 30px;
-    background: #E0E0E0;
+  h2{
+    margin-bottom: .3em;
   }
 }
 
@@ -143,7 +168,7 @@ body > div, body > div > div{
 }
 
 html{
-  background: #e0e0e0;
+  background: #fff;
 }
 
 #main, #content, header, body > nav{
@@ -171,20 +196,28 @@ figcaption{
   border-bottom: 1px solid rgba(0,0,0,.1);
 }
 
+.p{
+  padding: $pad;
+}
+
 .p-b{
-  padding-bottom: 50px;
+  padding-bottom: $pad;
 }
 
 .p-t{
-  padding-top: 40px;
+  padding-top: $pad;
 }
 
 .m-r{
-  margin-right: 40px;
+  margin-right: $pad;
+}
+
+.m-b{
+  margin-bottom: $pad;
 }
 
 .m-l{
-  margin-left: 40px;
+  margin-left: $pad;
 }
 
 .left{
@@ -205,7 +238,7 @@ nav.right a{
 
 nav a, nav a:visited{
   color: #999;
-  font-size: 100%;
+  font-size: 80%;
   font-weight: 300;
   text-decoration: none;
   line-height: 1.5em;
@@ -271,4 +304,22 @@ blockquote{
   }
 }
 
+/* Sidebar */
 
+.sidebar{
+  border-left: 1px solid #ccc;
+  font-size: 80%;
+}
+
+.sidebar .tweets li{
+  position: relative;
+  padding-left: 40px;
+  .twitter-date{
+    top: 3px;
+    width: 30px;
+    color: #999;
+    position: absolute;
+    left: -5px;
+    text-align: right;
+  }
+}

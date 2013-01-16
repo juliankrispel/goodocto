@@ -9,6 +9,9 @@ author: Julian Krispel-Samsel
 # simple_search: http://google.com/search
 description: This is the digital abode of Julian Krispel-Samsel. A designer/developer who also happens to draw. Make yourself at home.
 
+front_page_categories: [notes] # A list of categories for the front page
+front_page_categories_op : 'hide' # Whether to show or hide the list of categories from front_page_categories
+
 # Default date format is "ordinal" (resulting in "July 22nd 2007")
 # You can customize the format as defined in
 # http://www.ruby-doc.org/core-1.9.2/Time.html#method-i-strftime
@@ -46,7 +49,7 @@ titlecase: true       # Converts page and post titles to titlecase
 
 # list each of the sidebar modules you want to include, in the order you want them to appear.
 # To add custom asides, create files in /source/_includes/custom/asides/ and add them to the list like 'custom/asides/custom_aside_name.html'
-default_asides: [ asides/twitter.html]
+default_asides: [ custom/asides/recent_notes.html, asides/twitter.html ]
 # sidebar_disabled: true
 
 # Each layout uses the default asides, but they can have their own asides instead. Simply uncomment the lines below
@@ -69,9 +72,9 @@ github_skip_forks: true
 twitter_user: juliandoesstuff
 twitter_tweet_count: 3
 twitter_show_replies: false
-twitter_follow_button: true
+twitter_follow_button: false
 twitter_show_follower_count: false
-twitter_tweet_button: true
+twitter_tweet_button: false
 
 # Google +1
 google_plus_one: false

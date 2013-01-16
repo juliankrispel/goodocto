@@ -2,31 +2,34 @@
 layout: default
 ---
 
-<div class="blog-index clearfix">
+<div class="blog-index clearfix b-b m-b">
   <div class="two-thirds left">
     {% assign index = true %}
     {% for post in paginator.posts %}
     {% assign content = post.content %}
       <article>
-        {% include article.html %}
+        <h2><a href="{{post.url}}">{{ post.title }}</a></h2>
+        <p class="meta">
+          <time>{% include post/date.html %}{{ time }}</time>
+          Filed under {% include post/categories.html %}
+        </p>
       </article>
     {% endfor %}
     <div class="pagination">
       {% if paginator.next_page %}
         <a class="prev" href="{{paginator.next_page}}">&larr; Older</a>
       {% endif %}
-      <a href="/blog/archives">Blog Archives</a>
       {% if paginator.previous_page %}
       <a class="next" href="{{paginator.previous_page}}">Newer &rarr;</a>
       {% endif %}
     </div>
   </div>
-  {% if site.blog_index_asides.size %}
-    <aside class="sidebar right one-third">
-        {% include_array blog_index_asides %}
-      {% else %}
-        {% include_array default_asides %}
-    </aside>
-  {% endif %}
+  <aside class="sidebar right one-third">
+    {% if site.blog_index_asides.size %}
+          {% include_array blog_index_asides %}
+        {% else %}
+          {% include_array default_asides %}
+    {% endif %}
+  </aside>
 </div>
 
