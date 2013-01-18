@@ -33,7 +33,7 @@ module Jekyll
     def render(context)
       if @fig
         classNames = @fig.has_key?('class') ? " class=\"" + @fig['class'] + "\"" : "" ;
-        caption = @fig.has_key?('caption') ? "<figcaption>" + @fig['caption'] + "</figcaption>" : "" ;
+        caption = @fig.has_key?('caption') ? "<figcaption><p>" + @fig['caption'] + "</p></figcaption>" : "" ;
         title = @fig.has_key?('title') ? " title=\"" + @fig['title'] + "\"" : "" ;
         alt = @fig.has_key?('alt') ? " alt=\"" + @fig['alt'] + "\"" : "" ;
         src = @fig.has_key?('src') ? " src=\"" + @fig['src'] + "\"" : "" ;

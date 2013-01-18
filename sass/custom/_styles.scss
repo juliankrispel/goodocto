@@ -6,14 +6,20 @@
 $bodyColor: #333;
 $hoverColor: #999;
 $bgColor: #fff;
+$breakpoint: 800px;
 $pad: 2em;
 
-a{
+a, h2 a, h1 a, a:visited, p a, * a, aside.sidebar a{
   -webkit-transition: .4s;
   -moz-transition: .4s;
   -ms-transition: .4s;
   -o-transition: .4s;
   transition: .4s;
+  color: #333;
+  text-decoration: none;
+  &:hover{
+    color: #ccc;
+  }
 }
 
 html, body, *{
@@ -45,6 +51,15 @@ h2{
 h3{
   font-size: 110%;
   margin-bottom: 1em;
+}
+
+h4{
+  font-size: 110%;
+  margin-bottom: .4em;
+}
+
+small, .small{
+  font-size: 80%;
 }
 
 ul li{
@@ -84,8 +99,15 @@ p:last-child{
   width: 50%;
 }
 
-.third, .one-third{
+.third, .one-third, .third.p{
   width: 33%;
+  font-size: 90%;
+  @media(max-width: 900px){
+    width: 100%;
+    margin: 0 0 1em 0;
+    padding: 0;
+    clear: both;
+  }
 }
 
 .two-thirds{
@@ -102,7 +124,7 @@ article{
   width: 100%;
 }
 
-article.hentry p, figure.code, article.hentry .meta{
+article.hentry p, article.page p, article.page .meta, article.page h1, figure.code, article.hentry .meta{
   max-width: 700px;
   margin-left: auto;
   margin-right: auto;
@@ -138,13 +160,6 @@ article.hentry h1{
   display: block;
 }
 
-.logo img{
-  height: 100px;
-}
-
-.homepage .logo img{
-  height: auto;
-}
 
 
 .blog-index article{
@@ -160,6 +175,9 @@ article.hentry h1{
 
 body{
   padding: 50px 100px;
+  @media(max-width: 660px){
+    padding: 50px;
+  }
 }
 
 body > div, body > div > div{
@@ -175,6 +193,10 @@ html{
   background: none;
 }
 
+strong{
+  font-weight: 500;
+}
+
 .header{
   padding-bottom: 40px;
 }
@@ -184,7 +206,15 @@ html{
 }
 
 figure img{
+  margin-bottom: $pad/2;
+}
+
+figure img, p img, .third img, .half img{
   width: 100%;
+}
+
+.third p{
+  font-size: 90%;
 }
 
 figcaption{
@@ -208,12 +238,20 @@ figcaption{
   padding-top: $pad;
 }
 
+.m{
+  margin: $pad;
+}
+
 .m-r{
   margin-right: $pad;
 }
 
 .m-b{
   margin-bottom: $pad;
+}
+
+.m-b-s{
+  margin-bottom: $pad/2;
 }
 
 .m-l{

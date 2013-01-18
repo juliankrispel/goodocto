@@ -1,9 +1,9 @@
 <section class="b-b p">
-  <h3>Recent Notes</h3>
+  <h3 class="small">Recent Notes</h3>
   <ul id="recent_posts">
     {% for post in site.categories.notes limit: site.recent_posts %}
       <li class="post">
-        <a href="{{ root_url }}{{ post.url }}">{{ post.title }}</a>
+        <h4><a href="{{ root_url }}{{ post.url }}">{{ post.title }}</a></h4>
         {{ post.content | truncate: 100 }}
       </li>
     {% endfor %}

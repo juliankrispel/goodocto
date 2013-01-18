@@ -74,7 +74,5 @@ function getTwitterFeed(user, count, replies) {
     , type: 'jsonp'
     , error: function (err) { $('#tweets li.loading').addClass('error').text("Twitter's busted"); }
     , success: function(data) { showTwitterFeed(data.slice(0, count), user); }
-    }
-    , error: function (err) { console.log('dwqdwq'); $('#tweets li.loading').addClass('error').text("Twitter's busted"); }
   })
 }
