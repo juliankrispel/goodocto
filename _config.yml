@@ -31,10 +31,10 @@ date_format: "ordinal"
 # If publishing to a subdirectory as in http://site.com/project set 'root: /project'
 permalink: /blog/:year/:month/:day/:title/
 source: source
-destination: ~/Dropbox/Apps/site44/www.goodafternoon.co
-root: /
-# root: /octogood/public
-# destination: public
+# destination: ~/Dropbox/Apps/site44/www.goodafternoon.co
+# root: /
+root: /octogood/public
+destination: public
 plugins: plugins
 code_dir: downloads/code
 archive: false
@@ -100,7 +100,7 @@ disqus_short_name:
 disqus_show_comment_count: false
 
 # Google Analytics
-google_analytics_tracking_id:
+google_analytics_tracking_id: UA-37767197-1
 
 # Facebook Like
 facebook_like: false

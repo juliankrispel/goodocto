@@ -124,7 +124,7 @@ article{
   width: 100%;
 }
 
-article.hentry p, article.page p, article.page .meta, article.page h1, figure.code, article.hentry .meta{
+article.hentry p, h2, h3, h4, h5, h6, article.page p, article.page .meta, article.page h1, figure.code, article.hentry .meta{
   max-width: 700px;
   margin-left: auto;
   margin-right: auto;
